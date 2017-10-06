@@ -1,10 +1,10 @@
-hash = Hash.new
+hash = {}
 wovels = ["a", "e", "i", "o", "u"]
-vow = ("a".."z").to_a.each_with_index { |item, index|
-  if wovels.include?(item)
-  hash[item] = index + 1
-  end
-  }
+
+("a".."z").to_a.each_with_index do |item, index|
+  hash[item] = index + 1 if wovels.include?(item)
+end
+
 puts hash
 
 
